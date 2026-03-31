@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Planner</title>
+</head>
+<body>
+    <h1>Smart Study Planner</h1>
+
+    <form method="POST">
+        <input type="text" name="subject" placeholder="Subject" required>
+        <input type="date" name="date" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Your Plan</h2>
+    <ul>
+        {% for item in data %}
+            <li>
+                {{ item.subject }} - {{ item.days_left }} days left
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
